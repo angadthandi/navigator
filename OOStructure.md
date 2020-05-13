@@ -26,13 +26,13 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/508056/OO
 
 ## INavigator Interface
  #### Methods:
- - getPath(Location A, Location B)
+ - getPath(Location A, Location B) PathNode
 
 ## Navigator Class implements INavigator
  #### Attributes:
  - transportType TransportType
  #### Methods:
- - getPath(Location A, Location B)
+ - getPath(Location A, Location B) PathNode
  - Navigator(transportType TransportType) \
 // constructor - use __Singleton__ Object
 
@@ -42,7 +42,7 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/508056/OO
  #### Attributes:
  - transport ITransport
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
  - TransportContext(ITransport transport) \
 // constructor - sets transport attribute to passed in transport object
 
@@ -50,23 +50,23 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/508056/OO
 
 ## ITransport Interface
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
 
 ### Walk Class implements ITransport
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
 
 ### Car Class implements ITransport
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
 
 ### Bus Class implements ITransport
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
 
 ### Bike Class implements ITransport
  #### Methods:
- - buildPath(Location A, Location B)
+ - buildPath(Location A, Location B) PathNode
 
 ---
 
