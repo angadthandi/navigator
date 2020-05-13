@@ -13,7 +13,7 @@ public class Navigator implements INavigator {
     private ITransport transport;
 
     public Navigator(TransportType transportType) {
-        transport = _setTransport(transportType);
+        setTransport(transportType);
     }
 
     public PathNode getPath(Location A, Location B) {
@@ -24,25 +24,21 @@ public class Navigator implements INavigator {
         return node;
     }
 
-    private ITransport _setTransport(TransportType transportType) {
-        ITransport t = new Walk();
-
+    public void setTransport(TransportType transportType) {
         switch (transportType) {
             case WALK:
-                t = new Walk();
+                transport = new Walk();
             break;
             case CAR:
-                t = new Car();
+                transport = new Car();
             break;
             case BUS:
-                t = new Bus();
+                transport = new Bus();
             break;
             case BIKE:
-                t = new Bike();
+                transport = new Bike();
             break;
         }
-
-        return t;
     }
 
 }

@@ -10,7 +10,20 @@ public class Bus implements ITransport {
     public PathNode buildPath(Location A, Location B) {
         PathNode node = new PathNode();
 
-        System.out.printf("%s Path: %v", TransportType.BUS.getValue(), node);
+        PathNode node1 = new PathNode();
+        node1.location = A;
+        PathNode node2 = new PathNode();
+        node2.location = B;
+
+        System.out.printf(
+            "%s Path Latitude A: %f; Longitude A: %f;" +
+            " Latitude B: %f; Longitude B: %f \n",
+            TransportType.BUS.getValue(),
+            node1.location.latitude,
+            node1.location.longitude,
+            node2.location.latitude,
+            node2.location.longitude
+        );
 
         return node;
     }
